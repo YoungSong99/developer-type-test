@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Developer Type Test</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="폰트어썸 본인 CDN" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <!-- 페이지 설명 -->
+    <meta content="What's Your Developer Type? Find Out with DPI!🌟" name="description">
+    <!-- open Graph -->
+    <meta content="website" property="og:type">
+    <meta content="Developer Type Test" property="og:title">
+    <meta content="What's Your Developer Type? Find Out with DPI!🌟" property="og:description">
+    <meta content="https://with910dgree.netlify.app/img/main1.jpeg" property="og:image">
+    <meta content="https://with910dgree.netlify.app/" property="og:url">
+    <!-- twitter open Graph -->
+    <meta content="summary" name="twitter:card">
+    <meta content="Developer Type Test" name="twitter:title">
+    <meta content="What's Your Developer Type? Find Out with DPI!🌟" name="twitter:description">
+    <meta content="https://with910dgree.netlify.app/img/main1.jpeg" name="twitter:image">
+    <meta content="https://with910dgree.netlify.app/" name="twitter:domain">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <link href="img/파비콘.ico" rel="shortcut icon">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/default.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/qna.css" rel="stylesheet">
+    <link href="css/animation.css" rel="stylesheet">
+    <link href="css/result.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar__logo">
+        <img src="img/DPI_Logo.svg" style="width:100px; transform: translateY(px);">
+    </div>
+    <a class="navbar__toggleBtn" href="#"> <i class="fas fa-bars"></i> </a>
+</nav>
+<div class="container">
+
+    <section class="mx-auto my-5 py-5 px-4" id="main">
+        <h1 class="jalan testBoxTitle">What is My <br>
+            <span class="jalan" style="color: rgb(255, 174, 24);">Developer </span>Type? </h1>
+        <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+            <img alt="mainImage" class="img-fluid" src="img/main1.png">
+        </div>
+        <p class="Gmarket testBoxBody" style="margin-top: 10px;">
+            This is the Developer Type Test <br>
+            created by the DPI team!
+            <br><br>
+            Click the 'Start' button below to begin!
+        </p>
+
+        <button class="jalan btn mt-3 startButton" onclick="js:begin()" type="button">START</button>
+    </section>
+
+    <section id="qna">
+        <div class="status mx-auto mt-5">
+            <div class="countStatus">
+
+            </div>
+            <div class="statusBar">
+            </div>
+        </div>
+        <div class="qBox my-5 py-3 mx-auto">
+
+        </div>
+        <div class="answerBox">
+
+        </div>
+    </section>
+
+    <section class="mx-auto my-5 py-5 px-4" id="result">
+        <h2 style="font-family: yg-jalnan;">My Result?</h2>
+        <div style="font-family: GmarketSansMedium;">
+
+            <div class="resultInro">
+
+            </div>
+            <div class="resultname">
+
+            </div>
+        </div>
+        <div class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto" id="resultImg">
+
+        </div>
+        <div class="resultDesc">
+            <div class="resultDescTitle1">
+
+            </div>
+            <div class="resultDesc1">
+
+            </div>
+            <div class="resultDescTitle2">
+
+            </div>
+            <div class="resultDesc2">
+
+            </div>
+            <div class="resultDescTitle3">
+
+            </div>
+            <div class="resultDesc3">
+
+            </div>
+        </div>
+        <div class="recommand">
+            <div class="ifU">
+
+            </div>
+            <div class="basic1">
+
+            </div>
+            <div class="basic2">
+
+            </div>
+            <div class="basic3">
+
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script charset="utf-8" src="./js/data.js"></script>
+<script charset="utf-8" src="./js/start.js"></script>
+<!-- <script src="./js/share.js" charset="utf-8"></script> -->
+<script defer src="/js/navbar.js"></script>
+<script src="/js/share.js"></script>
+</body>
+</html>
