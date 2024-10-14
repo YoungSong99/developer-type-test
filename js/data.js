@@ -92,7 +92,7 @@ const qnaList = [
 const infoList = [
   {
     nameIntro: "I'll quietly get it all done from behind!",
-    name: '<Backend Type>',
+    name: 'Backend Type',
     descTitle1: '🦁 You’re a strategist who gets maximum efficiency in any situation!',
     desc1: 'You can’t stand repetitive tasks! Always chasing the most efficient solutions, you’ve got the perfect mindset of a true developer!',
     descTitle2: '🦁 You’ve got a wide understanding and excellent design skills.',
@@ -106,7 +106,7 @@ const infoList = [
   },
   {
     nameIntro: "I’ll handle the visible parts!",
-    name: '<Frontend Type>',
+    name: 'Frontend Type',
     descTitle1: '🦁 You’re full of curiosity and love a challenge.',
     desc1: 'With a creative and adventurous spirit, you’re always ready to dive into the latest web tech trends and master them fast!',
     descTitle2: '🦁 You’ve got a keen eye for detail.',
@@ -120,7 +120,7 @@ const infoList = [
   },
   {
     nameIntro: "I’ve got the design covered!",
-    name: '<Designer Type>',
+    name: 'Designer Type',
     descTitle1: '🦁 You’ve got a natural artistic flair.',
     desc1: 'With an eye for beauty and color, you effortlessly come up with trendy, creative designs.',
     descTitle2: '🦁 You have sharp insight and observation skills to understand what others need.',
@@ -134,7 +134,7 @@ const infoList = [
   },
   {
     nameIntro: "Leave the planning to me~",
-    name: '<Project Manager Type>',
+    name: 'Project Manager Type',
     descTitle1: '🦁 You’ve got great leadership and collaboration skills.',
     desc1: 'As a planner, you communicate with everyone — designers, backend, frontend — and lead the project efficiently with natural leadership.',
     descTitle2: '🦁 You’re skilled at analyzing things in detail.',
