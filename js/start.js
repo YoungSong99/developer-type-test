@@ -18,7 +18,7 @@ function setResult(){
 
   const resultName = document.querySelector('.resultname');
   resultName.innerHTML = infoList[point].name;
-  console.log(infoList[point].name)
+  console.log(infoList[point].name);
 
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
@@ -51,7 +51,37 @@ function setResult(){
   resultbasicj1.innerHTML = infoList[point].resultbasic1;
   resultbasicj2.innerHTML = infoList[point].resultbasic2;
   resultbasicj3.innerHTML = infoList[point].resultbasic3;
+
+  // Create a "Next" button that will go to the form
+  var formButton = document.createElement('button');
+  formButton.innerHTML = "Fill out your details";
+  formButton.classList.add('btn', 'btn-primary');
+
+  // Add event listener to transition to form
+  formButton.addEventListener("click", function() {
+    transitionToForm();  // Function to transition to form
+  });
+
+  const resultContainer = document.querySelector('#result');
+  resultContainer.appendChild(formButton);
 }
+
+function transitionToForm() {
+  const result = document.querySelector("#result");
+  const form = document.getElementById("userForm");
+
+  result.style.WebkitAnimation = "fadeOut 1s";
+  result.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    result.style.display = "none"; // Hide result after animation
+    // Show the form with an animation
+    form.style.display = "block";
+    form.style.WebkitAnimation = "fadeIn 1s";
+    form.style.animation = "fadeIn 1s";
+  }, 450);
+}
+
+
 
 function goResult(){
   qna.style.WebkitAnimation = "fadeOut 1s";
