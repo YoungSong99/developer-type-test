@@ -146,6 +146,43 @@ function goNext(qIdx){
   status.style.width = (100/endPoint) * (qIdx+1) + '%';
 }
 
+// Function to intercept the form submission
+document.getElementById('userForm').addEventListener('submit', function(event) {
+  event.preventDefault();  // Prevent the default form submission
+
+  const formData = new FormData(this);  // Get the form data
+
+  // Convert the form data to a JSON object
+  const data = {
+    first_name: formData.get('first_name'),
+    last_name: formData.get('last_name'),
+    email: formData.get('email'),
+    github_url: formData.get('github_url'),
+    devto_url: formData.get('devto_url'),
+    linkedin_url: formData.get('linkedin_url')
+  };
+
+  // Send the form data using a fetch POST request
+  fetch('http://localhost:3000/people.json', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())  // Parse the JSON response
+  .then(result => {
+    console.log('Success:', result);  // Handle the response
+    // You can update the DOM here if necessary
+    alert('Form submitted successfully!');
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('Error submitting the form');
+  });
+});
+
+
 function begin(){
   main.style.WebkitAnimation = "fadeOut 1s";
   main.style.animation = "fadeOut 1s";
