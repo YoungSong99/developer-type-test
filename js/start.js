@@ -182,12 +182,11 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 });
 
 function handleSuccessResponse(data) {
-  console.log('Handling success response:', data);
-
   const firstName = data.person.first_name;
   const qrCodeSvg = data.qr_code;
 
   const container = document.getElementById('result');
+  const form = document.getElementById('userForm'); 
 
   container.innerHTML = '';
 
@@ -196,16 +195,14 @@ function handleSuccessResponse(data) {
   container.appendChild(thankYouMessage);
 
   const qrCodeContainer = document.createElement('div');
+  qrCodeContainer.classList.add('qrCodeContainer');  // Add custom class for styling
 
   qrCodeContainer.insertAdjacentHTML('beforeend', qrCodeSvg);
-
   container.appendChild(qrCodeContainer);
 
-  container.style.display = 'block';
-  container.style.visibility = 'visible';
-  container.style.opacity = '1';
+  form.style.display = 'none';
 
-  console.log('DOM updated with thank you message and QR code.');
+  container.style.display = 'block';
 }
 
 
