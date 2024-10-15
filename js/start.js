@@ -146,13 +146,11 @@ function goNext(qIdx){
   status.style.width = (100/endPoint) * (qIdx+1) + '%';
 }
 
-// Function to intercept the form submission
 document.getElementById('userForm').addEventListener('submit', function(event) {
-  event.preventDefault();  // Prevent the default form submission
+  event.preventDefault();  
 
-  const formData = new FormData(this);  // Get the form data
+  const formData = new FormData(this);
 
-  // Convert the form data to a JSON object
   const data = {
     first_name: formData.get('first_name'),
     last_name: formData.get('last_name'),
@@ -162,25 +160,54 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     linkedin_url: formData.get('linkedin_url')
   };
 
-  // Send the form data using a fetch POST request
+  console.log('Submitting form data:', data);
+
   fetch('http://localhost:3000/people.json', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      // 'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')  // TODO: Implement CSRF token in PROD
     },
     body: JSON.stringify(data)
   })
-  .then(response => response.json())  // Parse the JSON response
+  .then(response => response.json())  
   .then(result => {
-    console.log('Success:', result);  // Handle the response
-    // You can update the DOM here if necessary
-    alert('Form submitted successfully!');
+    console.log('Response received:', result);
+
+    handleSuccessResponse(result);
   })
   .catch(error => {
     console.error('Error:', error);
-    alert('Error submitting the form');
   });
 });
+
+function handleSuccessResponse(data) {
+  console.log('Handling success response:', data);
+
+  const firstName = data.person.first_name;
+  const qrCodeSvg = data.qr_code;
+
+  const container = document.getElementById('result');
+
+  container.innerHTML = '';
+
+  const thankYouMessage = document.createElement('h2');
+  thankYouMessage.textContent = `Thank you for signing up, ${firstName}!`;
+  container.appendChild(thankYouMessage);
+
+  const qrCodeContainer = document.createElement('div');
+
+  qrCodeContainer.insertAdjacentHTML('beforeend', qrCodeSvg);
+
+  container.appendChild(qrCodeContainer);
+
+  container.style.display = 'block';
+  container.style.visibility = 'visible';
+  container.style.opacity = '1';
+
+  console.log('DOM updated with thank you message and QR code.');
+}
+
 
 
 function begin(){
