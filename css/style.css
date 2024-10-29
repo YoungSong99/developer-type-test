@@ -1,8 +1,7 @@
 @import "navbar.css";
 @import "school.css";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
-/* 여기어때 잘난체 */
 @font-face {
     font-family: 'yg-jalnan';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
@@ -10,24 +9,14 @@
     font-style: normal;
 }
 
-/* G마켓 산스 TTF */
 @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-family: "Inter", sans-serif;
     font-weight: normal;
     font-style: normal;
 }
 
 * {
-    font-family: 'Noto Sans KR', sans-serif;
-    /* font-family: 'Jua', sans-serif; */
+    font-family: 'Inter', sans-serif;
 }
 
 .footer-clean {
@@ -152,7 +141,7 @@ img {
 }
 
 .goLikeLion {
-    border: 1px solid none;
+    border: 1px solid;
     padding: 10px;
     font-weight: 600;
     border-radius: 20px;

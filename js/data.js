@@ -91,13 +91,13 @@ const qnaList = [
 ]
 const infoList = [
   {
-    nameIntro: "I'll quietly get it all done from behind!",
+    nameIntro: "I've got your back!",
     name: 'Backend Type',
-    descTitle1: '🦁 You’re a strategist who gets maximum efficiency in any situation!',
+    descTitle1: '🦁 You have a strategic mindset.',
     desc1: 'You can’t stand repetitive tasks! Always chasing the most efficient solutions, you’ve got the perfect mindset of a true developer!',
-    descTitle2: '🦁 You’ve got a wide understanding and excellent design skills.',
+    descTitle2: '🦁 You are the master of the invisible.',
     desc2: 'Backend developers work on things you can’t see. That’s why it takes a special ability to grasp abstract concepts. You’ve got the talent to understand and build structures for services and data storage.',
-    descTitle3: '🦁 You’re someone who never gives up easily. You’ve got steady determination and perseverance.',
+    descTitle3: '🦁 You have a steady determination.',
     desc3: 'With your persistence, you keep building and fixing things, always holding the fort in the background. Backend developers like you are the backbone of any service.',
     resultif: '🔍 Want to become a backend developer?',
     resultbasic1: '✔️ Basics: C/C++, Python, Java',
@@ -133,7 +133,7 @@ const infoList = [
     resultbasic3: '✔️ Advanced: Adobe XD, Figma, Sketch',
   },
   {
-    nameIntro: "Leave the planning to me~",
+    nameIntro: "Leave the planning to me!",
     name: 'Project Manager Type',
     descTitle1: '🦁 You’ve got great leadership and collaboration skills.',
     desc1: 'As a planner, you communicate with everyone — designers, backend, frontend — and lead the project efficiently with natural leadership.',
@@ -142,8 +142,9 @@ const infoList = [
     descTitle3: '🦁 You’re multi-talented and have a wide skill set.',
     desc3: 'To communicate effectively with all teams, planners need to understand both design and development, so you’re a well-rounded expert in IT.',
     resultif: '🔍 Want to become a PM?',
-    resultbasic1: '✔️ Basics: HTML, CSS, JavaScript',
-    resultbasic2: '✔️ Must-know: UI/UX concepts, Data analysis, Marketing',
-    resultbasic3: '✔️ Advanced: Protopie, GA, Adobe XD/Figma',
+    resultbasic1: '✔️ Basics: Project Management Fundamentals, Communication, Time Management',
+    resultbasic2: '✔️ Must-know: Risk Management, Agile Methodologies, Stakeholder Engagement',
+    resultbasic3: '✔️ Advanced: MS Project, JIRA, Asana, Data Analysis Tools (e.g., Google Analytics, Tableau)',
+
   }
 ]

@@ -44,21 +44,18 @@
     <link href="css/result.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__logo">
-        <img src="img/DPI_Logo.svg" style="width:100px; transform: translateY(px);">
-    </div>
-    <a class="navbar__toggleBtn" href="#"> <i class="fas fa-bars"></i> </a>
-</nav>
 <div class="container">
 
     <section class="mx-auto my-5 py-5 px-4" id="main">
+        <div class="navbar__logo">
+            <img src="img/DPI_Logo.svg" style="width:100px; transform: translateY(px);">
+        </div>
         <h1 class="jalan testBoxTitle">What is My <br>
             <span class="jalan" style="color: rgb(255, 174, 24);">Developer </span>Type? </h1>
         <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
             <img alt="mainImage" class="img-fluid" src="img/main1.png">
         </div>
-        <p class="Gmarket testBoxBody" style="margin-top: 10px;">
+        <p class="testBoxBody" style="margin-top: 10px;">
             This is the Developer Type Test <br>
             created by the DPI team!
             <br><br>
@@ -132,6 +129,7 @@
 
             </div>
 
+            <button class="jalan btn mt-3 startButton" type="button" onclick="restartPage()">RESTART</button>
         </div>
     </section>
 </div>
