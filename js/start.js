@@ -18,7 +18,7 @@ function setResult(){
 
   const resultName = document.querySelector('.resultname');
   resultName.innerHTML = infoList[point].name;
-  console.log(infoList[point].name)
+  console.log(infoList[point].name);
 
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
@@ -51,7 +51,37 @@ function setResult(){
   resultbasicj1.innerHTML = infoList[point].resultbasic1;
   resultbasicj2.innerHTML = infoList[point].resultbasic2;
   resultbasicj3.innerHTML = infoList[point].resultbasic3;
+
+  // Create a "Next" button that will go to the form
+  var formButton = document.createElement('button');
+  formButton.innerHTML = "Fill out your details";
+  formButton.classList.add('jalan', 'btn', 'mt-3', 'startButton');
+
+  // Add event listener to transition to form
+  formButton.addEventListener("click", function() {
+    transitionToForm();  // Function to transition to form
+  });
+
+  const resultContainer = document.querySelector('#result');
+  resultContainer.appendChild(formButton);
 }
+
+function transitionToForm() {
+  const result = document.querySelector("#result");
+  const form = document.getElementById("userForm");
+
+  result.style.WebkitAnimation = "fadeOut 1s";
+  result.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    result.style.display = "none"; // Hide result after animation
+    // Show the form with an animation
+    form.style.display = "block";
+    form.style.WebkitAnimation = "fadeIn 1s";
+    form.style.animation = "fadeIn 1s";
+  }, 450);
+}
+
+
 
 function goResult(){
   qna.style.WebkitAnimation = "fadeOut 1s";
@@ -115,6 +145,67 @@ function goNext(qIdx){
   var status = document.querySelector('.statusBar');
   status.style.width = (100/endPoint) * (qIdx+1) + '%';
 }
+
+document.getElementById('userForm').addEventListener('submit', function(event) {
+  event.preventDefault();  
+
+  const formData = new FormData(this);
+
+  const data = {
+    first_name: formData.get('first_name'),
+    last_name: formData.get('last_name'),
+    email: formData.get('email'),
+    github_username: formData.get('github_username'),
+    devto_username: formData.get('devto_username'),
+    linkedin_url: formData.get('linkedin_url')
+  };
+
+  console.log('Submitting form data:', data);
+
+  fetch('https://ted-demo.onrender.com/people.json', { //TODO: Switch to production URLs
+    method: 'POST',
+    headers: {
+      "Accept": "application/json",
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())  
+  .then(result => {
+    console.log('Response received:', result);
+
+    handleSuccessResponse(result);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+});
+
+function handleSuccessResponse(data) {
+  const firstName = data.person.first_name;
+  const qrCodeSvg = data.qr_code;
+
+  const container = document.getElementById('result');
+  const form = document.getElementById('userForm'); 
+
+  container.innerHTML = '';
+
+  const thankYouMessage = document.createElement('h2');
+  thankYouMessage.textContent = `Thank you for signing up, ${firstName}!`;
+  container.appendChild(thankYouMessage);
+
+  const qrCodeContainer = document.createElement('div');
+  qrCodeContainer.classList.add('qrCodeContainer');  // Add custom class for styling
+
+  qrCodeContainer.insertAdjacentHTML('beforeend', qrCodeSvg);
+  container.appendChild(qrCodeContainer);
+
+  form.style.display = 'none';
+
+  container.style.display = 'block';
+}
+
+
 
 function begin(){
   main.style.WebkitAnimation = "fadeOut 1s";

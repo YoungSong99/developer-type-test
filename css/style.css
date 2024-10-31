@@ -468,3 +468,63 @@ td {
     color: black;
     border-radius: 5px;
 }
+
+
+
+/* TODO: Modulate Later */
+
+/* Style the form */
+#userForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 70%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the input fields */
+  #userForm label {
+    font-family: 'GmarketSansMedium';
+    font-size: 18px;
+    color: #A6A6A6;
+  }
+  
+  #userForm input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #868686;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'GmarketSansMedium';
+    font-size: 16px;
+    color: black;
+  }
+  
+  /* Style the submit button */
+  #userForm button {
+    background-color: #FFD966;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'GmarketSansMedium';
+    cursor: pointer;
+  }
+  
+  #userForm button:hover {
+    background-color: #FC9F27;
+    color: white;
+  }
+  
+  /* Style for the QR code container */
+  .qrCodeContainer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
