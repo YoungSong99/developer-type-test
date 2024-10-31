@@ -55,7 +55,7 @@ function setResult(){
   // Create a "Next" button that will go to the form
   var formButton = document.createElement('button');
   formButton.innerHTML = "Fill out your details";
-  formButton.classList.add('btn', 'btn-primary');
+  formButton.classList.add('jalan', 'btn', 'mt-3', 'startButton');
 
   // Add event listener to transition to form
   formButton.addEventListener("click", function() {
