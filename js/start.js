@@ -155,18 +155,18 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     first_name: formData.get('first_name'),
     last_name: formData.get('last_name'),
     email: formData.get('email'),
-    github_url: formData.get('github_url'),
-    devto_url: formData.get('devto_url'),
+    github_username: formData.get('github_username'),
+    devto_username: formData.get('devto_username'),
     linkedin_url: formData.get('linkedin_url')
   };
 
   console.log('Submitting form data:', data);
 
-  fetch('http://localhost:3000/people.json', {
+  fetch('https://ted-demo.onrender.com/people.json', { //TODO: Switch to production URLs
     method: 'POST',
     headers: {
+      "Accept": "application/json",
       'Content-Type': 'application/json',
-      // 'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')  // TODO: Implement CSRF token in PROD
     },
     body: JSON.stringify(data)
   })
