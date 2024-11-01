@@ -178,7 +178,7 @@ li {
     margin-bottom: 25px;
     left: 0;
     top: 0;
-    width: 200*42 + 30*42 + 'px';
+    width: 200 *42 +30 *42 + 'px';
     height: 250px;
     transition: left 0.5s ease-out;
 }
@@ -250,7 +250,7 @@ li {
     text-align: center;
     border: 3px;
     margin-top: 15px;
-    font-family: 'GmarketSansMedium';
+    font-family: 'Inter';
 }
 
 .li {
@@ -318,7 +318,7 @@ a.check {
     .univName {
         text-align: center;
         margin-top: 8px;
-        font-family: 'GmarketSansMedium';
+        font-family: 'Inter';
         font-size: 1em;
     }
 }
@@ -329,7 +329,7 @@ a.check {
     margin-bottom: 0px;
     text-align: center;
     font-weight: bold;
-    font-family: 'GmarketSansMedium';
+    font-family: 'Inter';
     transform: translateY(-50px);
     font-size: 30px;
 }
@@ -374,7 +374,7 @@ a.check {
     margin-bottom: 30px;
     text-align: center;
     font-weight: bold;
-    font-family: 'GmarketSansMedium';
+    font-family: 'Inter';
     transform: translateY(0px);
     font-size: 30px;
 }
@@ -426,7 +426,7 @@ a.check {
 
 .founded_title {
     font-weight: bold;
-    font-family: 'GmarketSansMedium';
+    font-family: 'Inter';
     margin-bottom: 5px;
     font-size: 15px;
 }
@@ -451,7 +451,7 @@ a.check {
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
-    font-family: 'GmarketSansMedium';
+    font-family: 'Inter';
 }
 
 table {
@@ -470,40 +470,59 @@ td {
 }
 
 
-
 /* TODO: Modulate Later */
 
 /* Style the form */
 #userForm {
     background-color: white;
-    padding: 20px;
-    border-radius: 15px;
-    width: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 50px 40px;
+    border-radius: 20px;
+    width: 80%;
     margin: 20px auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style the input fields */
-  #userForm label {
-    font-family: 'GmarketSansMedium';
-    font-size: 18px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the input fields */
+#userForm label {
+    font-family: 'Inter';
+    font-size: 1rem;
     color: #A6A6A6;
-  }
-  
-  #userForm input {
+}
+
+#userForm div {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 8px;
+}
+
+#userForm input {
     width: 100%;
     padding: 10px;
-    margin: 8px 0;
     border: 1px solid #868686;
     border-radius: 8px;
     box-sizing: border-box;
-    font-family: 'GmarketSansMedium';
+    font-family: 'Inter';
     font-size: 16px;
     color: black;
-  }
-  
-  /* Style the submit button */
-  #userForm button {
+}
+
+
+#userForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #868686;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    font-size: 16px;
+    color: black;
+}
+
+
+/* Style the submit button */
+#userForm button {
     background-color: #FFD966;
     border: none;
     color: black;
@@ -513,18 +532,17 @@ td {
     display: inline-block;
     font-size: 18px;
     border-radius: 10px;
-    font-family: 'GmarketSansMedium';
+    font-family: 'Inter';
     cursor: pointer;
-  }
-  
-  #userForm button:hover {
+}
+
+#userForm button:hover {
     background-color: #FC9F27;
     color: white;
-  }
-  
-  /* Style for the QR code container */
-  .qrCodeContainer {
+}
+
+/* Style for the QR code container */
+.qrCodeContainer {
     margin-top: 20px;
     text-align: center;
-  }
-  
+}

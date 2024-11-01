@@ -53,16 +53,19 @@ function setResult(){
   resultbasicj3.innerHTML = infoList[point].resultbasic3;
 
   // Create a "Next" button that will go to the form
+
+
+
   var formButton = document.createElement('button');
-  formButton.innerHTML = "Fill out your details";
-  formButton.classList.add('jalan', 'btn', 'mt-3', 'startButton');
+  formButton.innerHTML = "FILL OUT YOUR DETAIL";
+  formButton.classList.add('jalan', 'btn', 'mt-3', 'goSchool');
 
   // Add event listener to transition to form
   formButton.addEventListener("click", function() {
     transitionToForm();  // Function to transition to form
   });
 
-  const resultContainer = document.querySelector('#result');
+  const resultContainer = document.querySelector('.applyBox');
   resultContainer.appendChild(formButton);
 }
 
@@ -147,7 +150,7 @@ function goNext(qIdx){
 }
 
 document.getElementById('userForm').addEventListener('submit', function(event) {
-  event.preventDefault();  
+  event.preventDefault();
 
   const formData = new FormData(this);
 
@@ -156,7 +159,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     last_name: formData.get('last_name'),
     email: formData.get('email'),
     github_username: formData.get('github_username'),
-    devto_username: formData.get('devto_username'),
+    quiz_result: formData.get('quiz_result'),
     linkedin_url: formData.get('linkedin_url')
   };
 
@@ -170,7 +173,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     },
     body: JSON.stringify(data)
   })
-  .then(response => response.json())  
+  .then(response => response.json())
   .then(result => {
     console.log('Response received:', result);
 
@@ -186,7 +189,7 @@ function handleSuccessResponse(data) {
   const qrCodeSvg = data.qr_code;
 
   const container = document.getElementById('result');
-  const form = document.getElementById('userForm'); 
+  const form = document.getElementById('userForm');
 
   container.innerHTML = '';
 

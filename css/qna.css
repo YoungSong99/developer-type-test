@@ -12,7 +12,7 @@
 }
 
 .answerList {
-  border: 1px solid #868686; ;
+  border: 1px solid #868686;
   border-radius: 10px;
   display: block;
   width: 70%;
@@ -24,7 +24,7 @@
   font-family: 'GmarketSansMedium';
 }
 .answerList:link{
-  color:black; 
+  color:black;
   border: 1px solid #868686; ;
   text-decoration: none;
   border: none;
@@ -74,7 +74,7 @@
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+52,ff5c5c+100;Red+3D+%231 */
   background: #ffd4d4;
   /* #FC9F27 */
-  
+
   /* Old browsers */
   background: -moz-linear-gradient(top, #FC9F27 0%, #FC9F27 52%, #FC9F27 100%);
   /* FF3.6-15 */
@@ -94,7 +94,7 @@
   margin-bottom: 10px;
 }
 .resultBtn{
-  text-align: center; 
-  margin-top: 20px; 
+  text-align: center;
+  margin-top: 20px;
   display: inline;
 }
