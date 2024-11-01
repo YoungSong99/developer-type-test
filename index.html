@@ -83,7 +83,7 @@
 
     <section class="mx-auto my-5 py-5 px-4" id="result">
         <h2 style="font-family: yg-jalnan;">My Result?</h2>
-        <div style="font-family: GmarketSansMedium;">
+        <div style="font-family: Inter;">
 
             <div class="resultInro">
 
@@ -115,7 +115,7 @@
 
             </div>
         </div>
-        <div class="recommand">
+        <div class="recommend">
             <div class="ifU">
 
             </div>
@@ -128,11 +128,16 @@
             <div class="basic3">
 
             </div>
-
-            <button class="jalan btn mt-3 startButton" type="button" onclick="restartPage()">RESTART</button>
+            <div class="applyBox">
+                <button class="jalan btn mt-3 goSchool" type="button" onclick="restartPage()">RESTART</button>
+            </div>
         </div>
     </section>
     <form id="userForm" style="display: none;">
+
+        <h1 class="jalan testBoxTitle">Let's<br>
+            <span class="jalan" style="color: rgb(255, 174, 24);">Network </span>
+        </h1>
         <div>
           <label for="first_name">First Name:</label>
           <input type="text" id="first_name" name="first_name" required />
@@ -150,17 +155,24 @@
           <input type="text" id="github_username" name="github_username" />
         </div>
         <div>
-          <label for="devto_username">Dev.to Username:</label>
-          <input type="text" id="devto_username" name="devto_username" />
-        </div>
-        <div>
           <label for="linkedin_url">LinkedIn URL:</label>
           <input type="text" id="linkedin_url" name="linkedin_url" />
         </div>
-        <button type="submit" class="jalan btn mt-3 startButton">Submit</button>
+        <div>
+            <label for="quiz_result">Your Developer Type:</label>
+            <select id="quiz_result" name="quiz_result">
+                <option value="https://dpi-test.netlify.app/frontend">Frontend</option>
+                <option value="https://dpi-test.netlify.app/backend">Backend</option>
+                <option value="https://dpi-test.netlify.app/pm">PM</option>
+                <option value="https://dpi-test.netlify.app/uiux">UI/UX</option>
+            </select>
+        </div>
+        <div class="applyBox">
+            <button type="submit" class="jalan btn mt-3 goSchool">Submit</button>
+        </div>
       </form>
-      
-      
+
+
 </div>
 
 <script charset="utf-8" src="./js/data.js"></script>

@@ -19,7 +19,7 @@
 
 .resultDesc{
   font-size: 20px;
-  font-family: GmarketSansMedium;
+  font-family: Inter;
 }
 
 
@@ -38,48 +38,52 @@
 
 .resultname{
   margin-top: 10px;
-  font-size: 2em; 
+  font-size: 2em;
   border: none;
-  font-family: GmarketSansMedium;
+  font-family: Inter;
 }
 .resultInro{
   font-size:1.5em;
   color: #868686;
 }
 .resultDescTitle1, .resultDescTitle2, .resultDescTitle3{
-  font-size: 1.5em; 
-  font-family: GmarketSansMedium;
+  font-size: 1.5em;
+  font-family: Inter;
 }
 .resultDesc1, .resultDesc2, .resultDesc3{
   margin-top: 10px;
   margin-bottom: 14px;
   font-size: 1em;
   color: #868686;
-  font-family: GmarketSansMedium;
+  font-family: Inter;
 }
 .likelionApllyImg{
   width: 20%;
   margin: 30px;
 }
 .likelionApplyText{
-  font-size: 1.7em; 
-  font-family: GmarketSansMedium;
+  font-size: 1.7em;
+  font-family: Inter;
   margin-bottom: 30px;
 }
 .applyBox{
   text-align: center;
   margin-top: 30px;
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .goSchool{
-  border : 1px solid none; 
-  padding: 15px; 
+  display: flex;
+  justify-content: center;
+  border : 1px solid none;
+  padding: 15px;
   font-size: 1em;
-  font-weight: 600;  
-  border-radius: 10px; 
+  font-weight: 600;
+  border-radius: 10px;
   background-color: rgb(248, 225, 160);
-  font-family: GmarketSansMedium;
+  font-family: Inter;
 }
 .goSchool:hover{
   background-color: orange;
@@ -91,8 +95,8 @@
   margin-top: 40px;
 }
 .shareReuslt{
-  font-size: 1.5em; 
-  font-family: GmarketSansMedium;
+  font-size: 1.5em;
+  font-family: Inter;
   color: #868686;
 }
 .sharebtn_custom{
@@ -101,7 +105,7 @@
 }
 
 .naverIcon{
-  width: 6%;  
+  width: 6%;
   transform: translateY(2px);
 }
 
@@ -110,14 +114,14 @@
 .ifU{
   margin-top: 20px;
   margin-bottom: 8px;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   color: orange;
   font-size: 1.7em;
-  font-family: GmarketSansMedium;
+  font-family: Inter;
 }
 
 .basic1, .basic2, .basic3{
-  font-family: GmarketSansMedium;
+  font-family: Inter;
   font-size: 1.2em;
 }
 
@@ -130,22 +134,22 @@
 
   .resultname{
     margin-top: 6px;
-    font-size: 1.5em; 
+    font-size: 1.5em;
     border: none;
-    font-family: GmarketSansMedium;
+    font-family: Inter;
   }
   .resultInro{
     font-size: 1em;
     color: #868686;
-    font-family: GmarketSansMedium;
+    font-family: Inter;
   }
   .resultDescTitle1, .resultDescTitle2, .resultDescTitle3{
-    font-family: GmarketSansMedium;
-    font-size: 0.9em; 
+    font-family: Inter;
+    font-size: 0.9em;
   }
   .resultDesc1, .resultDesc2, .resultDesc3{
     font-size: 0.7em;
-    font-family: GmarketSansMedium;
+    font-family: Inter;
     color: #868686;
   }
   .likelionApllyImg{
@@ -153,16 +157,16 @@
     margin: 25px;
   }
   .likelionApplyText{
-    font-size: 1.1em; 
-    font-family: GmarketSansMedium;
+    font-size: 1.1em;
+    font-family: Inter;
     margin-bottom: 10px;
   }
   .goSchool{
     font-size: 0.8em;
-    border : 1px solid none; 
-    padding: 10px 13px; 
-    font-weight: 600;  
-    border-radius: 10px; 
+    border : 1px solid none;
+    padding: 10px 13px;
+    font-weight: 600;
+    border-radius: 10px;
     background-color: rgb(255, 235, 179);
   }
   .goSchool:hover{
@@ -174,14 +178,15 @@
   .applyBox{
     text-align: center;
     margin-top: 20px;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
   .shareReusltBox{
     margin-top: 30px;
   }
   .shareReuslt{
-    font-size: 1em; 
-    font-family: GmarketSansMedium;
+    font-size: 1em;
+    font-family: Inter;
     color: #868686;
   }
   .sharebtn_custom{
@@ -190,19 +195,18 @@
   }
   .naverIcon{
     transform: translateY(1px);
-    width: 17%;  
+    width: 17%;
   }
   .ifU{
     margin-top: 20px;
     margin-bottom: 8px;
-    text-decoration: underline;
     color: orange;
     font-size: 1.3em;
-    font-family: GmarketSansMedium;
+    font-family: Inter;
   }
-  
+
   .basic1, .basic2, .basic3{
-    font-family: GmarketSansMedium;
+    font-family: Inter;
     font-size: 0.7em;
   }
 }
